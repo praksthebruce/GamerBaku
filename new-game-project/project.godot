@@ -14,9 +14,13 @@ config/name="New Game Project"
 run/main_scene="uid://cgfwqlte7w2s1"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 
+[autoload]
+
+Global="*uid://tmfpltu0cqaj"
+
 [display]
 
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
 [editor_plugins]

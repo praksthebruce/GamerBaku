@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://cd6x548ikuhdy"]
+
+[ext_resource type="Script" uid="uid://d1xh0f2sp2kn5" path="res://timer_screen.gd" id="1_8jrq0"]
+[ext_resource type="Texture2D" uid="uid://c5cff1nxx7t85" path="res://Game image.jpg" id="1_olhyb"]
+[ext_resource type="Texture2D" uid="uid://dts7oos8aosxu" path="res://—Pngtree—cute cartoon dumpling with smiling_23705377.png" id="3_cxpu7"]
+
+[node name="Node2D" type="Node2D" unique_id=1499123270]
+position = Vector2(3, 2)
+script = ExtResource("1_8jrq0")
+
+[node name="background" type="TextureRect" parent="." unique_id=1370928561]
+offset_top = -1.0
+offset_right = 1177.8301
+offset_bottom = 707.1403
+scale = Vector2(0.9763718, 0.91366076)
+texture = ExtResource("1_olhyb")
+
+[node name="Dumpling_container" type="HBoxContainer" parent="." unique_id=1994924487]
+custom_minimum_size = Vector2(80, 40)
+propagate_maximum_size = false
+offset_left = 285.0
+offset_top = 269.0
+offset_right = 926.0
+offset_bottom = 394.0
+accessibility_region = true
+alignment = 1
+
+[node name="Dumpling" type="TextureRect" parent="Dumpling_container" unique_id=921096758]
+custom_minimum_size = Vector2(125, 125)
+layout_mode = 2
+texture = ExtResource("3_cxpu7")
+expand_mode = 1
+
+[node name="Dumpling2" type="TextureRect" parent="Dumpling_container" unique_id=782616404]
+custom_minimum_size = Vector2(125, 125)
+layout_mode = 2
+texture = ExtResource("3_cxpu7")
+expand_mode = 1
+
+[node name="Dumpling3" type="TextureRect" parent="Dumpling_container" unique_id=1324384319]
+custom_minimum_size = Vector2(125, 125)
+layout_mode = 2
+texture = ExtResource("3_cxpu7")
+expand_mode = 1
+
+[node name="Dumpling4" type="TextureRect" parent="Dumpling_container" unique_id=174680896]
+custom_minimum_size = Vector2(125, 125)
+layout_mode = 2
+texture = ExtResource("3_cxpu7")
+expand_mode = 1
+
+[node name="Dumpling5" type="TextureRect" parent="Dumpling_container" unique_id=1507675873]
+custom_minimum_size = Vector2(125, 125)
+layout_mode = 2
+texture = ExtResource("3_cxpu7")
+expand_mode = 1
+
+[node name="Level" type="RichTextLabel" parent="." unique_id=325363559]
+offset_left = 367.0
+offset_top = 569.0
+offset_right = 529.0
+offset_bottom = 645.0
+theme_override_colors/default_color = Color(0.0005232865, 0.060768947, 0.09060594, 1)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/normal_font_size = 42
+text = "Level1"
+
+[node name="Timer" type="RichTextLabel" parent="." unique_id=613976680]
+offset_left = 643.0
+offset_top = 571.0
+offset_right = 777.0
+offset_bottom = 653.0
+theme_override_colors/default_color = Color(0.0056930743, 0.04163439, 0.02524094, 1)
+theme_override_font_sizes/normal_font_size = 42
+text = "10.0"

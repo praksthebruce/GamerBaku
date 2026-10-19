@@ -1,0 +1,125 @@
+[gd_scene format=3 uid="uid://d2ardkrlohu7g"]
+
+[ext_resource type="Texture2D" uid="uid://c5cff1nxx7t85" path="res://Game image.jpg" id="1_11mgy"]
+[ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://Player.tscn" id="2_f6tb2"]
+[ext_resource type="PackedScene" uid="uid://du05snuy3woai" path="res://dumpling.tscn" id="2_o6yob"]
+[ext_resource type="Script" uid="uid://b6rq6x4ip7rdh" path="res://Scenes/canvas_layer.gd" id="4_o6yob"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_11mgy"]
+size = Vector2(1310.5, 60.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f6tb2"]
+size = Vector2(228.625, 25.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5h11f"]
+size = Vector2(246, 29.5)
+
+[sub_resource type="GDScript" id="GDScript_5txvl"]
+script/source = "extends Label
+
+
+"
+
+[node name="Minigame1" type="Node2D" unique_id=800964925]
+
+[node name="ScrollingBackground" type="Parallax2D" parent="." unique_id=1787569351]
+repeat_size = Vector2(1000, 0)
+autoscroll = Vector2(100, 0)
+
+[node name="Background" type="TextureRect" parent="ScrollingBackground" unique_id=980828764]
+offset_left = -4.0
+offset_top = 2.0
+offset_right = 1150.0
+offset_bottom = 649.0
+texture = ExtResource("1_11mgy")
+
+[node name="Platform1" type="StaticBody2D" parent="." unique_id=1515788574]
+
+[node name="ColorRect" type="ColorRect" parent="Platform1" unique_id=292957228]
+offset_left = -17.0
+offset_top = 653.0
+offset_right = 1248.0
+offset_bottom = 716.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1" unique_id=1248130645]
+position = Vector2(527, 637)
+shape = SubResource("RectangleShape2D_11mgy")
+
+[node name="Platform2" type="StaticBody2D" parent="." unique_id=332775763]
+position = Vector2(350, -100)
+
+[node name="ColorRect" type="ColorRect" parent="Platform2" unique_id=1789452721]
+offset_left = -240.0
+offset_top = 449.0
+offset_right = -9.0
+offset_bottom = 475.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2" unique_id=92189222]
+position = Vector2(-125, 431)
+shape = SubResource("RectangleShape2D_f6tb2")
+
+[node name="Dumpling" parent="." unique_id=2000089308 instance=ExtResource("2_o6yob")]
+position = Vector2(740, 441)
+
+[node name="Dumpling2" parent="." unique_id=1012052486 instance=ExtResource("2_o6yob")]
+position = Vector2(226, 308)
+
+[node name="Dumpling3" parent="." unique_id=1839785886 instance=ExtResource("2_o6yob")]
+position = Vector2(796, 234)
+
+[node name="Dumpling4" parent="." unique_id=1464512803 instance=ExtResource("2_o6yob")]
+position = Vector2(272, 92)
+
+[node name="Platform3" type="StaticBody2D" parent="." unique_id=1447780094]
+position = Vector2(350, -100)
+
+[node name="ColorRect" type="ColorRect" parent="Platform3" unique_id=1182307752]
+offset_left = 273.0
+offset_top = 580.0
+offset_right = 511.0
+offset_bottom = 606.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3" unique_id=1115859493]
+position = Vector2(386, 560)
+shape = SubResource("RectangleShape2D_5h11f")
+
+[node name="Platform4" type="StaticBody2D" parent="." unique_id=850562385]
+position = Vector2(350, -100)
+
+[node name="ColorRect" type="ColorRect" parent="Platform4" unique_id=1715752341]
+offset_left = 314.0
+offset_top = 371.0
+offset_right = 552.0
+offset_bottom = 397.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform4" unique_id=575885519]
+position = Vector2(441, 356)
+shape = SubResource("RectangleShape2D_5h11f")
+
+[node name="Platform5" type="StaticBody2D" parent="." unique_id=1654387068]
+position = Vector2(350, -100)
+
+[node name="ColorRect" type="ColorRect" parent="Platform5" unique_id=208263554]
+offset_left = -196.0
+offset_top = 224.0
+offset_right = 42.0
+offset_bottom = 250.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform5" unique_id=286484161]
+position = Vector2(-79, 216)
+shape = SubResource("RectangleShape2D_5h11f")
+
+[node name="Player" parent="." unique_id=557122363 instance=ExtResource("2_f6tb2")]
+position = Vector2(375, 536)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1934853171]
+script = ExtResource("4_o6yob")
+
+[node name="DumplingCounter" type="Label" parent="CanvasLayer" unique_id=805567681]
+offset_right = 117.0
+offset_bottom = 34.0
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 5
+theme_override_font_sizes/font_size = 18
+text = "DumplingsCollected: 0"
+script = SubResource("GDScript_5txvl")

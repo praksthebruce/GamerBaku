@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://du05snuy3woai"]
+
+[ext_resource type="Script" uid="uid://bppymivmkyve3" path="res://dumpling.gd" id="1_cmx0r"]
+[ext_resource type="Texture2D" uid="uid://dts7oos8aosxu" path="res://—Pngtree—cute cartoon dumpling with smiling_23705377.png" id="1_phlaq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5h11f"]
+radius = 28.071337
+
+[node name="Dumpling" type="Area2D" unique_id=2000089308]
+script = ExtResource("1_cmx0r")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=621247469]
+position = Vector2(-2, -3)
+scale = Vector2(0.028675005, 0.033449993)
+texture = ExtResource("1_phlaq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=666382940]
+shape = SubResource("CircleShape2D_5h11f")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

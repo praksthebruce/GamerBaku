@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://ckudr8chj1kgo"]
+
+[ext_resource type="Script" uid="uid://80kl10p8d3vr" path="res://player.gd" id="1_kpjcp"]
+[ext_resource type="Texture2D" uid="uid://dyhiy07vbt6yj" path="res://Kung-Fu-Panda-No-Background.png" id="2_kne1u"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5h11f"]
+radius = 9.486833
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bx8n8"]
+radius = 59.07622
+
+[node name="Player" type="CharacterBody2D" unique_id=557122363]
+script = ExtResource("1_kpjcp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=154483600]
+position = Vector2(-4.7683716e-07, 1.0000007)
+scale = Vector2(0.26813552, 0.26343748)
+texture = ExtResource("2_kne1u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=337428414]
+shape = SubResource("CircleShape2D_5h11f")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1264289472]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=251042010]
+position = Vector2(8, 2)
+shape = SubResource("CircleShape2D_bx8n8")
